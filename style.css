@@ -1,0 +1,194 @@
+/* 🌊 BODY */
+/* 🌊 BODY */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: radial-gradient(circle at top, #003566, #000814);
+  color: white;
+  overflow: hidden;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+/* HEADING */
+h1 {
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+/* STATUS */
+#status {
+  margin: 10px;
+  font-size: 22px;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* BOARD */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 18px;
+  justify-content: center;
+  margin-top: 40px;
+}
+/* 🏆 SCOREBOARD */
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* individual score cards */
+.score {
+  padding: 10px 20px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+  font-size: 18px;
+}
+
+/* highlight players */
+.x-score {
+  color: #ffd166;
+}
+
+.o-score {
+  color: #00eaff;
+}
+
+/* 🐚✨ BEAUTIFUL SHELL CELLS */
+.cell {
+  width: 120px;
+  height: 120px;
+
+  /* shell gradient */
+  background: radial-gradient(circle at 30% 30%, #fff6e5, #ffb4a2, #ff8fab);
+
+  /* shell shape */
+  border-radius: 60% 60% 50% 50% / 75% 75% 40% 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+  cursor: pointer;
+
+  /* 3D + glow */
+  box-shadow:
+    inset -6px -6px 12px rgba(0,0,0,0.25),
+    inset 6px 6px 12px rgba(255,255,255,0.5),
+    0 0 15px rgba(255, 182, 193, 0.4);
+
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.cell:hover {
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow:
+    0 0 25px #ffb4a2,
+    0 0 45px #ff8fab;
+}
+
+/* click press effect */
+.cell:active {
+  transform: scale(0.95);
+}
+
+/* ✨ WIN GLOW EFFECT */
+.win {
+  animation: winGlow 1s infinite alternate;
+}
+
+@keyframes winGlow {
+  from {
+    box-shadow: 0 0 15px #00eaff, 0 0 30px #00eaff;
+  }
+  to {
+    box-shadow: 0 0 35px #00eaff, 0 0 70px #00eaff;
+  }
+}
+
+/* BUTTON */
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  background: linear-gradient(45deg, #00c3ff, #0077ff);
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00c3ff;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00eaff;
+}
+
+/* 🫧 BUBBLES */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  animation: rise linear infinite;
+}
+
+/* bubble animation */
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 🐟 SWIMMING FISH */
+.fish {
+  position: fixed;
+  font-size: 32px;
+  opacity: 0.85;
+  animation: swim linear infinite;
+}
+
+/* different fish paths */
+.fish:nth-child(1) {
+  top: 20%;
+  animation-duration: 14s;
+}
+.fish:nth-child(2) {
+  top: 50%;
+  animation-duration: 18s;
+}
+.fish:nth-child(3) {
+  top: 75%;
+  animation-duration: 22s;
+}
+
+/* swim animation */
+@keyframes swim {
+  0% {
+    left: -10%;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.2);
+  }
+  100% {
+    left: 110%;
+    transform: scaleX(1);
+  }
+}
