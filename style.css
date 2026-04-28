@@ -1,5 +1,5 @@
-/* 🌊 BODY */
-/* 🌊 BODY */
+
+/*  BODY */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -33,7 +33,7 @@ h1 {
   justify-content: center;
   margin-top: 40px;
 }
-/* 🏆 SCOREBOARD */
+/* SCOREBOARD */
 .scoreboard {
   display: flex;
   justify-content: center;
@@ -62,7 +62,7 @@ h1 {
   color: #00eaff;
 }
 
-/* 🐚✨ BEAUTIFUL SHELL CELLS */
+/* CELLS */
 .cell {
   width: 120px;
   height: 120px;
@@ -102,7 +102,7 @@ h1 {
   transform: scale(0.95);
 }
 
-/* ✨ WIN GLOW EFFECT */
+/* EFFECT */
 .win {
   animation: winGlow 1s infinite alternate;
 }
@@ -135,7 +135,7 @@ button:hover {
   box-shadow: 0 0 20px #00eaff;
 }
 
-/* 🫧 BUBBLES */
+/*  BUBBLES */
 .bubble {
   position: absolute;
   bottom: -100px;
@@ -156,13 +156,7 @@ button:hover {
   }
 }
 
-/* 🐟 SWIMMING FISH */
-.fish {
-  position: fixed;
-  font-size: 32px;
-  opacity: 0.85;
-  animation: swim linear infinite;
-}
+
 
 /* different fish paths */
 .fish:nth-child(1) {

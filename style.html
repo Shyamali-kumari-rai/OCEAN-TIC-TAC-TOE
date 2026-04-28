@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ocean Tic Tac Toe 🌊🐠</title>
+  <title>Ocean Tic Tac Toe </title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <h1>🌊 Ocean Tic Tac Toe 🐠</h1>
   <div id="status">Player 🐠's Turn</div>
+  <div class="mode-select">
+  <button onclick="setMode('friend')">👫 Play with Friend</button>
+  <button onclick="setMode('ai')">🤖 Play with AI</button>
+</div>
 
-  <!-- 🐚 GAME BOARD -->
+  <!--  GAME BOARD -->
   <div class="board">
     <div class="cell" data-index="0"></div>
     <div class="cell" data-index="1"></div>
@@ -23,13 +27,11 @@
     <div class="cell" data-index="8"></div>
   </div>
 
-  <!-- 🔁 RESTART BUTTON -->
+  <!-- RESTART BUTTON -->
   <button onclick="restartGame()">Restart Game</button>
 
-  <!-- 🐟 SWIMMING FISH -->
-  <div class="fish">🐟</div>
-  <div class="fish">🐠</div>
-  <div class="fish">🐡</div>
+  <!--  SWIMMING FISH -->
+  
   <div class="scoreboard">
   <div class="score x-score">
     🐠 Player X: <span id="scoreX">0</span>
@@ -39,27 +41,30 @@
   </div>
 </div>
 
-  <!-- 🔊 SOUND EFFECTS -->
+  <!--  SOUND EFFECTS -->
   <!-- Create a folder named "sounds" and add these files -->
-  <audio id="clickSound" src="waterdrop.mp3"></audio>
-  <audio id="winSound" src="win.mp3"></audio>
+  <audio id="clickSound" src="sound/waterdrop.mp3"></audio>
+  <audio id="winSound" src="sound/win.mp3"></audio>
+  <audio id="drawsound" src="sound/draw.mp3"></audio>
 
-  <!-- 🫧 BUBBLE SCRIPT -->
+  <!--  BUBBLE SCRIPT -->
   <script>
-    // create bubbles dynamically
-    for (let i = 0; i < 25; i++) {
-      const bubble = document.createElement("div");
-      bubble.classList.add("bubble");
+    
+  // create bubbles dynamically
+  for (let i = 0; i < 25; i++) {
+    const bubble = document.createElement("div");
+    bubble.classList.add("bubble");
 
-      bubble.style.left = Math.random() * 100 + "vw";
-      bubble.style.animationDuration = (5 + Math.random() * 5) + "s";
-      bubble.style.width = bubble.style.height = (10 + Math.random() * 20) + "px";
+    bubble.style.left = Math.random() * 100 + "vw";
+    bubble.style.animationDuration = (5 + Math.random() * 5) + "s";
+    bubble.style.width = bubble.style.height = (10 + Math.random() * 20) + "px";
 
-      document.body.appendChild(bubble);
-    }
-  </script>
+    document.body.appendChild(bubble);
+  }
+</script>
+  
 
-  <!-- 🎮 GAME SCRIPT -->
+  <!--  GAME SCRIPT -->
   <script src="script.js"></script>
 
 </body>
