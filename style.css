@@ -17,6 +17,9 @@ body {
   min-height: 100vh;
   padding: 40px 20px;
 }
+.game-area {
+  margin-bottom: 40px;  /* prevents cutting */
+}
 html, body {
   height: 100%;
   margin: 0;
