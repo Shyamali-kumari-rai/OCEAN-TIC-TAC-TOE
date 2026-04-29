@@ -8,6 +8,15 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.main-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   
+  gap: 60px;
+
+  min-height: 100vh;
+  padding: 40px 20px;
+}
 html, body {
   height: 100%;
   margin: 0;
