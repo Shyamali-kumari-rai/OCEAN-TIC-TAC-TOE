@@ -5,7 +5,8 @@ body {
   text-align: center;
   background: radial-gradient(circle at top, #003566, #000814);
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 html, body {
   height: 100%;
